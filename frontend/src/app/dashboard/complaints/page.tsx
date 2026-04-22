@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import ComplaintTable from '@/components/Tables/ComplaintTable'
 import Modal from '@/components/Modal'
@@ -14,6 +14,19 @@ const Page = () => {
     const [loading, setLoading] = useState(false)
     const [open, setOpen] = useState(false)
     const [refetch, setRefetch] = useState(false)
+    const [hasAccess, setHasAccess] = useState(false)
+
+    useEffect(() => {
+        try {
+        const user = localStorage.getItem("user");
+        if (user) {
+            const parsedUser = JSON.parse(user);
+            if (parsedUser.role !== "admin") {
+                setHasAccess(true);
+            }
+        }
+        } catch{}
+    },[])
 
     const handleSubmit = async () => {
         if (!title || !description) {
@@ -50,13 +63,13 @@ const Page = () => {
                     <h1 className="text-xl font-bold text-gray-900 tracking-tight">Complaints</h1>
                 </div>
 
-                <button
+               {hasAccess && <button
                     onClick={() => setOpen(true)}
                     className="bg-brand-blue text-white px-4 py-2 rounded-md font-semibold text-sm hover:bg-brand-blue-light transition-all active:scale-[0.98] flex items-center gap-2 shadow-sm"
                 >
                     <Plus size={16} />
                     New Submission
-                </button>
+                </button>}
             </div>
 
             <Modal
