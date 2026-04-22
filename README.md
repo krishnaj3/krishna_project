@@ -14,8 +14,8 @@ password : Platform@214
 
 
 File links:
-- [Security Vulnerabilities](./frontend/vulnerabilities.md)
-- [Security Solutions](./frontend/solutions.md)
+- [Security Vulnerabilities](./vulnerabilities.md)
+- [Security Solutions](./solutions.md)
 
 # Overview
 The following web application called as Complaint management system it allows users to submit and manage complaints 
