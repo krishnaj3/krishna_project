@@ -1,5 +1,17 @@
 # Complaint Management System
 
+# Website Link
+https://krishnajagtap.online/
+
+# Login credentials
+Admin:
+username - admin
+password - 123456
+
+User :
+username : krishnajagtap@gmail.com
+password : Platform@214
+
 # Overview
 The following web application called as Complaint management system it allows users to submit and manage complaints 
 The system provides role-based access where normal users can manage their own complaints, and admin can manage all users and complaints.
