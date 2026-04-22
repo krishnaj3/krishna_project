@@ -12,6 +12,11 @@ User :
 username : krishnajagtap@gmail.com
 password : Platform@214
 
+
+File links:
+- [Security Vulnerabilities](./frontend/vulnerabilities.md)
+- [Security Solutions](./frontend/solutions.md)
+
 # Overview
 The following web application called as Complaint management system it allows users to submit and manage complaints 
 The system provides role-based access where normal users can manage their own complaints, and admin can manage all users and complaints.
